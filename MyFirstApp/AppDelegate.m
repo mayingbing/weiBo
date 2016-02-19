@@ -23,6 +23,12 @@
     
     tabBarVc.view.backgroundColor = [UIColor yellowColor];
     
+    UITableViewController *home = [[UITableViewController alloc]init];
+    [tabBarVc addChildViewController:home];
+    
+    
+    
+    
     self.window.rootViewController = tabBarVc;
     
     [self.window makeKeyAndVisible];
