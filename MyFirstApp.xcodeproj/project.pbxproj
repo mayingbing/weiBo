@@ -46,12 +46,12 @@
 		185DB2DC1C7811AC00C8354C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				185DB2DD1C7811AC00C8354C /* discover */,
-				185DB2E11C7811AC00C8354C /* home */,
 				185DB2E51C7811AC00C8354C /* main */,
+				185DB2E11C7811AC00C8354C /* home */,
 				185DB2EE1C7811AC00C8354C /* message */,
-				185DB2F21C7811AC00C8354C /* other */,
+				185DB2DD1C7811AC00C8354C /* discover */,
 				185DB2F91C7811AC00C8354C /* profile */,
+				185DB2F21C7811AC00C8354C /* other */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
