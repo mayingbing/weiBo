@@ -13,15 +13,27 @@
 #import "MAPopView.h"
 #import "MAPopTableViewController.h"
 
-@interface MAHomeTableViewController ()
+
+@interface MAHomeTableViewController ()<MACoverViewDelegate>
 
 @property(nonatomic ,strong)MAPopTableViewController *one;
+@property(nonatomic ,strong)MAPopView *pop;
 
 @property(nonatomic ,weak)MATitleButton *titleBtn;
 
 @end
 
 @implementation MAHomeTableViewController
+
+
+-(MAPopTableViewController *)one{
+    if (_one == nil) {
+        MAPopTableViewController *one = [[MAPopTableViewController alloc]init];
+        _one = one;
+    }
+    
+    return _one;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -69,6 +81,8 @@
     
     //弹出蒙版
     MACoverView *cover = [MACoverView show];
+    cover.delegate = self;
+    [cover setDimBackground:self.titleBtn.selected];
     
     // 弹出pop菜单
     CGFloat popW = 200;
@@ -77,11 +91,19 @@
     CGFloat popY = 55;
     
     MAPopView *pop = [MAPopView showPop:CGRectMake(popX, popY, popW, popH)];
-   
+    _pop = pop;
+    
+    
     pop.contentView = self.one.view;
     
     
 
+}
+
+-(void)hidePopView:(MACoverView *)cover{
+    
+    [MAPopView popHide];
+    _titleBtn.selected = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -101,58 +123,6 @@
     return 0;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -12,6 +12,9 @@
 
 @property(nonatomic ,weak)UIView *contentView;
 
+
++(void)popHide;
+
 +(instancetype)showPop:(CGRect )rect;
 
 @end

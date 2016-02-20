@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+@class MACoverView;
+@protocol MACoverViewDelegate <NSObject>
+
+-(void)hidePopView:(MACoverView *)cover;
+
+@end
+
+
+
 @interface MACoverView : UIView
+
+@property(nonatomic ,weak)id<MACoverViewDelegate>  delegate;
+
+
+@property (nonatomic ,assign)BOOL  dimBackground;
+
 +(instancetype)show;
+
 @end

@@ -8,7 +8,7 @@
 
 #import "MAPopView.h"
 
-@implementation MAPopView
+@implementation MAPopView 
 
 
 
@@ -22,6 +22,16 @@
     return pop;
 }
 
++(void)popHide{
+    
+    for (UIView *popMenu in CZKeyWindow.subviews) {
+        if ([popMenu isKindOfClass:self]) {
+             [popMenu removeFromSuperview];
+        }
+    }
+   
+}
+
 -(void)setContentView:(UIView *)contentView{
     
     [self.contentView removeFromSuperview];
@@ -31,6 +41,21 @@
     contentView.backgroundColor = [UIColor clearColor];
     
     [self addSubview:contentView];
+    
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    // 计算内容视图尺寸
+    CGFloat y = 9;
+    CGFloat margin = 5;
+    CGFloat x = margin;
+    CGFloat w = self.width - 2 * margin;
+    CGFloat h = self.height - y - margin;
+    
+    _contentView.frame = CGRectMake(x, y, w, h);
     
 }
 

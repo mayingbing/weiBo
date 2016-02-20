@@ -24,6 +24,7 @@
 		18B7B2D21C784C3600FE1073 /* MACoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2D11C784C3600FE1073 /* MACoverView.m */; };
 		18B7B2D51C784E3800FE1073 /* MAPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2D41C784E3800FE1073 /* MAPopView.m */; };
 		18B7B2D81C7853A000FE1073 /* MAPopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2D71C7853A000FE1073 /* MAPopTableViewController.m */; };
+		18B7B2DB1C7869C800FE1073 /* MANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2DA1C7869C800FE1073 /* MANavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		18B7B2D41C784E3800FE1073 /* MAPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPopView.m; sourceTree = "<group>"; };
 		18B7B2D61C7853A000FE1073 /* MAPopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPopTableViewController.h; sourceTree = "<group>"; };
 		18B7B2D71C7853A000FE1073 /* MAPopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPopTableViewController.m; sourceTree = "<group>"; };
+		18B7B2D91C7869C800FE1073 /* MANavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANavigationController.h; sourceTree = "<group>"; };
+		18B7B2DA1C7869C800FE1073 /* MANavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,8 @@
 			children = (
 				185DB2E91C7811AC00C8354C /* MATabBarController.h */,
 				185DB2EA1C7811AC00C8354C /* MATabBarController.m */,
+				18B7B2D91C7869C800FE1073 /* MANavigationController.h */,
+				18B7B2DA1C7869C800FE1073 /* MANavigationController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 			files = (
 				18B7B2D21C784C3600FE1073 /* MACoverView.m in Sources */,
 				18B7B2D81C7853A000FE1073 /* MAPopTableViewController.m in Sources */,
+				18B7B2DB1C7869C800FE1073 /* MANavigationController.m in Sources */,
 				185DB2FD1C7811AC00C8354C /* AppDelegate.m in Sources */,
 				18B7B2BE1C78164100FE1073 /* MAMessageTableViewController.m in Sources */,
 				18B7B2C11C78165200FE1073 /* MADiscoverTableViewController.m in Sources */,

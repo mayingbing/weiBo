@@ -12,6 +12,7 @@
 #import "MAMessageTableViewController.h"
 #import "MADiscoverTableViewController.h"
 #import "MAProfileTableViewController.h"
+#import "MANavigationController.h"
 
 @interface MATabBarController ()
 
@@ -60,8 +61,9 @@
     vc.tabBarItem.selectedImage = [UIImage imageRenderingModeAlwaysOriginalWithImageName:selectedImageName];
     vc.tabBarItem.title = title;
     
-    UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:vc];
-
+    MANavigationController *homeNav = [[MANavigationController alloc]initWithRootViewController:vc];
+    
+    
     
     [self addChildViewController:homeNav];
 

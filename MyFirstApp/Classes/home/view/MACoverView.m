@@ -11,6 +11,23 @@
 
 @implementation MACoverView
 
+-(void)setDimBackground:(BOOL)dimBackground{
+    
+    _dimBackground = dimBackground;
+    
+    if (dimBackground) {
+        
+        self.backgroundColor = [UIColor blackColor];
+        self.alpha = 0.5;
+    }else{
+        self.alpha = 1;
+        self.backgroundColor = [UIColor clearColor];
+    }
+
+    
+    
+}
+
 +(instancetype)show{
     
     MACoverView *cover = [[MACoverView alloc]initWithFrame:CZKeyWindow.frame];
@@ -22,6 +39,10 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     [self removeFromSuperview];
+    
+    if ([_delegate respondsToSelector:@selector(hidePopView:)]) {
+        [_delegate hidePopView:self];
+    }
     
 }
 
