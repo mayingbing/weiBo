@@ -9,10 +9,15 @@
 #import "MAHomeTableViewController.h"
 #import "UIBarButtonItem+MABarItem.h"
 #import "MATitleButton.h"
+#import "MACoverView.h"
+#import "MAPopView.h"
+#import "MAPopTableViewController.h"
 
 @interface MAHomeTableViewController ()
 
-@property(nonatomic ,strong)MATitleButton *titleBtn;
+@property(nonatomic ,strong)MAPopTableViewController *one;
+
+@property(nonatomic ,weak)MATitleButton *titleBtn;
 
 @end
 
@@ -24,7 +29,7 @@
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem setNavigationBarButtonItemWith:@"navigationbar_friendsearch" hightlightImageName:@"navigationbar_friendsearch_highlighted" target:self action:@selector(pop)];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem setNavigationBarButtonItemWith:@"navigationbar_pop" hightlightImageName:@"navigationbar_pop_highlighted" target:self action:@selector(push)];
     
-    
+ 
     
     //titleBtn
     
@@ -38,7 +43,7 @@
     [titleBtn setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
     
     // 高亮的时候不需要调整图片
-//    titleBtn.adjustsImageWhenHighlighted = NO;
+    titleBtn.adjustsImageWhenHighlighted = NO;
     
     self.navigationItem.titleView = titleBtn;
     
@@ -59,11 +64,24 @@
 }
 
 -(void)click{
+    
     _titleBtn.selected = !_titleBtn.selected;
     
+    //弹出蒙版
+    MACoverView *cover = [MACoverView show];
+    
+    // 弹出pop菜单
+    CGFloat popW = 200;
+    CGFloat popX = (self.view.width - 200)*0.5 ;
+    CGFloat popH = 200;
+    CGFloat popY = 55;
+    
+    MAPopView *pop = [MAPopView showPop:CGRectMake(popX, popY, popW, popH)];
+   
+    pop.contentView = self.one.view;
     
     
-    
+
 }
 
 - (void)didReceiveMemoryWarning {

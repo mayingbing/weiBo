@@ -1,5 +1,5 @@
 //
-//  MACoverView.h
+//  MAPopTableViewController.h
 //  MyFirstApp
 //
 //  Created by apple on 16/2/20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MACoverView : UIView
-+(instancetype)show;
+@interface MAPopTableViewController : UITableViewController
+
 @end

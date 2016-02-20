@@ -22,6 +22,8 @@
 		18B7B2CA1C782F3F00FE1073 /* MATitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2C91C782F3F00FE1073 /* MATitleButton.m */; };
 		18B7B2CD1C78366400FE1073 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2CC1C78366400FE1073 /* UIView+Frame.m */; };
 		18B7B2D21C784C3600FE1073 /* MACoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2D11C784C3600FE1073 /* MACoverView.m */; };
+		18B7B2D51C784E3800FE1073 /* MAPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2D41C784E3800FE1073 /* MAPopView.m */; };
+		18B7B2D81C7853A000FE1073 /* MAPopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2D71C7853A000FE1073 /* MAPopTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,10 @@
 		18B7B2CF1C7837DA00FE1073 /* 公共.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "公共.pch"; sourceTree = "<group>"; };
 		18B7B2D01C784C3600FE1073 /* MACoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACoverView.h; sourceTree = "<group>"; };
 		18B7B2D11C784C3600FE1073 /* MACoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACoverView.m; sourceTree = "<group>"; };
+		18B7B2D31C784E3800FE1073 /* MAPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPopView.h; sourceTree = "<group>"; };
+		18B7B2D41C784E3800FE1073 /* MAPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPopView.m; sourceTree = "<group>"; };
+		18B7B2D61C7853A000FE1073 /* MAPopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAPopTableViewController.h; sourceTree = "<group>"; };
+		18B7B2D71C7853A000FE1073 /* MAPopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAPopTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,8 @@
 			children = (
 				18B7B2B91C78162F00FE1073 /* MAHomeTableViewController.h */,
 				18B7B2BA1C78162F00FE1073 /* MAHomeTableViewController.m */,
+				18B7B2D61C7853A000FE1073 /* MAPopTableViewController.h */,
+				18B7B2D71C7853A000FE1073 /* MAPopTableViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -147,6 +155,8 @@
 				18B7B2C91C782F3F00FE1073 /* MATitleButton.m */,
 				18B7B2D01C784C3600FE1073 /* MACoverView.h */,
 				18B7B2D11C784C3600FE1073 /* MACoverView.m */,
+				18B7B2D31C784E3800FE1073 /* MAPopView.h */,
+				18B7B2D41C784E3800FE1073 /* MAPopView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -406,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B7B2D21C784C3600FE1073 /* MACoverView.m in Sources */,
+				18B7B2D81C7853A000FE1073 /* MAPopTableViewController.m in Sources */,
 				185DB2FD1C7811AC00C8354C /* AppDelegate.m in Sources */,
 				18B7B2BE1C78164100FE1073 /* MAMessageTableViewController.m in Sources */,
 				18B7B2C11C78165200FE1073 /* MADiscoverTableViewController.m in Sources */,
@@ -414,6 +425,7 @@
 				185DB2FE1C7811AC00C8354C /* MATabBarController.m in Sources */,
 				185DB3001C7811AC00C8354C /* UIImage+MAimageRender.m in Sources */,
 				18B7B2C71C7823BA00FE1073 /* UIBarButtonItem+MABarItem.m in Sources */,
+				18B7B2D51C784E3800FE1073 /* MAPopView.m in Sources */,
 				18B7B2CA1C782F3F00FE1073 /* MATitleButton.m in Sources */,
 				18B7B2C41C78166600FE1073 /* MAProfileTableViewController.m in Sources */,
 				18B7B2CD1C78366400FE1073 /* UIView+Frame.m in Sources */,

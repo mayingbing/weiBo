@@ -8,14 +8,23 @@
 
 #import "MACoverView.h"
 
+
 @implementation MACoverView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++(instancetype)show{
+    
+    MACoverView *cover = [[MACoverView alloc]initWithFrame:CZKeyWindow.frame];
+    [CZKeyWindow addSubview:cover];
+    cover.backgroundColor = [UIColor yellowColor];
+    return cover;
 }
-*/
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [self removeFromSuperview];
+    
+}
+
+
 
 @end
