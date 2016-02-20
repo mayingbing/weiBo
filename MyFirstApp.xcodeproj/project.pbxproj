@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		185DB2D61C77F99100C8354C /* MATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DB2D51C77F99100C8354C /* MATabBarController.m */; };
+		185DB2D91C77FC2300C8354C /* UIImage+MAimageRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DB2D81C77FC2300C8354C /* UIImage+MAimageRender.m */; };
+		185DB2DB1C7802EF00C8354C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185DB2DA1C7802EF00C8354C /* UIKit.framework */; };
 		188B5AE41C59A8790082EAD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B5AE31C59A8790082EAD6 /* main.m */; };
 		188B5AE71C59A8790082EAD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B5AE61C59A8790082EAD6 /* AppDelegate.m */; };
 		188B5AEF1C59A8790082EAD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188B5AEE1C59A8790082EAD6 /* Assets.xcassets */; };
@@ -17,6 +19,9 @@
 /* Begin PBXFileReference section */
 		185DB2D41C77F99100C8354C /* MATabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATabBarController.h; sourceTree = "<group>"; };
 		185DB2D51C77F99100C8354C /* MATabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATabBarController.m; sourceTree = "<group>"; };
+		185DB2D71C77FC2300C8354C /* UIImage+MAimageRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MAimageRender.h"; sourceTree = "<group>"; };
+		185DB2D81C77FC2300C8354C /* UIImage+MAimageRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MAimageRender.m"; sourceTree = "<group>"; };
+		185DB2DA1C7802EF00C8354C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		188B5ADF1C59A8780082EAD6 /* MyFirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188B5AE31C59A8790082EAD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		188B5AE51C59A8790082EAD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185DB2DB1C7802EF00C8354C /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 		188B5AD61C59A8780082EAD6 = {
 			isa = PBXGroup;
 			children = (
+				185DB2DA1C7802EF00C8354C /* UIKit.framework */,
 				188B5AE11C59A8780082EAD6 /* MyFirstApp */,
 				188B5AE01C59A8780082EAD6 /* Products */,
 			);
@@ -60,6 +67,8 @@
 				188B5AE61C59A8790082EAD6 /* AppDelegate.m */,
 				185DB2D41C77F99100C8354C /* MATabBarController.h */,
 				185DB2D51C77F99100C8354C /* MATabBarController.m */,
+				185DB2D71C77FC2300C8354C /* UIImage+MAimageRender.h */,
+				185DB2D81C77FC2300C8354C /* UIImage+MAimageRender.m */,
 				188B5AEE1C59A8790082EAD6 /* Assets.xcassets */,
 				188B5AF01C59A8790082EAD6 /* LaunchScreen.storyboard */,
 				188B5AF31C59A8790082EAD6 /* Info.plist */,
@@ -149,6 +158,7 @@
 				185DB2D61C77F99100C8354C /* MATabBarController.m in Sources */,
 				188B5AE71C59A8790082EAD6 /* AppDelegate.m in Sources */,
 				188B5AE41C59A8790082EAD6 /* main.m in Sources */,
+				185DB2D91C77FC2300C8354C /* UIImage+MAimageRender.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

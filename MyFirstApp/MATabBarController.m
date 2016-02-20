@@ -7,12 +7,33 @@
 //
 
 #import "MATabBarController.h"
+#import "UIImage+MAimageRender.h"
 
 @interface MATabBarController ()
 
 @end
 
 @implementation MATabBarController
+
+
++(void)initialize{
+    
+    UITabBarItem *item = [UITabBarItem appearanceWhenContainedIn:self, nil];
+    
+    NSMutableDictionary *att = [NSMutableDictionary dictionary];
+    att[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    
+//    NSMutableDictionary *attFont = [NSMutableDictionary dictionary];
+//    attFont[NSFontAttributeName] = [UIFont systemFontOfSize:20];
+//    [item setTitleTextAttributes:attFont forState:UIControlStateSelected];
+   
+    [item setTitleTextAttributes:att forState:UIControlStateSelected];
+    
+    
+}
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,20 +42,37 @@
     
     UITableViewController *home = [[UITableViewController alloc]init];
     home.view.backgroundColor = [UIColor redColor];
-    [self addChildViewController:home];
+    
+    [self setAllChildViewControllerWith:home imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected" title:@"首页"];
+    
     
     UITableViewController *message = [[UITableViewController alloc]init];
     message.view.backgroundColor = [UIColor yellowColor];
-    [self addChildViewController:message];
+    [self setAllChildViewControllerWith:message imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected" title:@"消息"];
     
     UITableViewController *discover = [[UITableViewController alloc]init];
     discover.view.backgroundColor = [UIColor greenColor];
-    [self addChildViewController:discover];
+    [self setAllChildViewControllerWith:discover imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected" title:@"发现"];
     
     UITableViewController *profile = [[UITableViewController alloc]init];
     profile.view.backgroundColor = [UIColor blueColor];
-    [self addChildViewController:profile];
+    [self setAllChildViewControllerWith:profile imageName:@"tabbar_profile" selectedImageName:@"tabbar_profile_selected" title:@"我的"];
 }
+
+-(void)setAllChildViewControllerWith:(UITableViewController *)vc imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName title:(NSString *)title{
+    
+    vc.tabBarItem.image = [UIImage imageNamed:imageName];
+    
+    vc.tabBarItem.selectedImage = [UIImage imageRenderingModeAlwaysOriginalWithImageName:selectedImageName];
+    vc.tabBarItem.title = title;
+    
+    
+    [self addChildViewController:vc];
+
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
