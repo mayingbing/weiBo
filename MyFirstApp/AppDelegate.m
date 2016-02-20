@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MATabBarController.h"
 
 @interface AppDelegate ()
 
@@ -19,12 +20,8 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    UITabBarController *tabBarVc = [[UITabBarController alloc]init];
+    MATabBarController *tabBarVc = [[MATabBarController alloc]init];
     
-    tabBarVc.view.backgroundColor = [UIColor yellowColor];
-    
-    UITableViewController *home = [[UITableViewController alloc]init];
-    [tabBarVc addChildViewController:home];
     
     
     
