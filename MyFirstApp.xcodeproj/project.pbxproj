@@ -14,6 +14,14 @@
 		185DB3001C7811AC00C8354C /* UIImage+MAimageRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DB2F51C7811AC00C8354C /* UIImage+MAimageRender.m */; };
 		188B5AEF1C59A8790082EAD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188B5AEE1C59A8790082EAD6 /* Assets.xcassets */; };
 		188B5AF21C59A8790082EAD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B5AF01C59A8790082EAD6 /* LaunchScreen.storyboard */; };
+		18B7B2BB1C78162F00FE1073 /* MAHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2BA1C78162F00FE1073 /* MAHomeTableViewController.m */; };
+		18B7B2BE1C78164100FE1073 /* MAMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2BD1C78164100FE1073 /* MAMessageTableViewController.m */; };
+		18B7B2C11C78165200FE1073 /* MADiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2C01C78165200FE1073 /* MADiscoverTableViewController.m */; };
+		18B7B2C41C78166600FE1073 /* MAProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2C31C78166600FE1073 /* MAProfileTableViewController.m */; };
+		18B7B2C71C7823BA00FE1073 /* UIBarButtonItem+MABarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2C61C7823BA00FE1073 /* UIBarButtonItem+MABarItem.m */; };
+		18B7B2CA1C782F3F00FE1073 /* MATitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2C91C782F3F00FE1073 /* MATitleButton.m */; };
+		18B7B2CD1C78366400FE1073 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2CC1C78366400FE1073 /* UIView+Frame.m */; };
+		18B7B2D21C784C3600FE1073 /* MACoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B2D11C784C3600FE1073 /* MACoverView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +37,23 @@
 		188B5AEE1C59A8790082EAD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		188B5AF11C59A8790082EAD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		188B5AF31C59A8790082EAD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B7B2B91C78162F00FE1073 /* MAHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHomeTableViewController.h; sourceTree = "<group>"; };
+		18B7B2BA1C78162F00FE1073 /* MAHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHomeTableViewController.m; sourceTree = "<group>"; };
+		18B7B2BC1C78164100FE1073 /* MAMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMessageTableViewController.h; sourceTree = "<group>"; };
+		18B7B2BD1C78164100FE1073 /* MAMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMessageTableViewController.m; sourceTree = "<group>"; };
+		18B7B2BF1C78165200FE1073 /* MADiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADiscoverTableViewController.h; sourceTree = "<group>"; };
+		18B7B2C01C78165200FE1073 /* MADiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADiscoverTableViewController.m; sourceTree = "<group>"; };
+		18B7B2C21C78166600FE1073 /* MAProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProfileTableViewController.h; sourceTree = "<group>"; };
+		18B7B2C31C78166600FE1073 /* MAProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProfileTableViewController.m; sourceTree = "<group>"; };
+		18B7B2C51C7823BA00FE1073 /* UIBarButtonItem+MABarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+MABarItem.h"; sourceTree = "<group>"; };
+		18B7B2C61C7823BA00FE1073 /* UIBarButtonItem+MABarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+MABarItem.m"; sourceTree = "<group>"; };
+		18B7B2C81C782F3F00FE1073 /* MATitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATitleButton.h; sourceTree = "<group>"; };
+		18B7B2C91C782F3F00FE1073 /* MATitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATitleButton.m; sourceTree = "<group>"; };
+		18B7B2CB1C78366400FE1073 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		18B7B2CC1C78366400FE1073 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		18B7B2CF1C7837DA00FE1073 /* 公共.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "公共.pch"; sourceTree = "<group>"; };
+		18B7B2D01C784C3600FE1073 /* MACoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACoverView.h; sourceTree = "<group>"; };
+		18B7B2D11C784C3600FE1073 /* MACoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACoverView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +94,8 @@
 		185DB2DE1C7811AC00C8354C /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				18B7B2BF1C78165200FE1073 /* MADiscoverTableViewController.h */,
+				18B7B2C01C78165200FE1073 /* MADiscoverTableViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -100,6 +127,8 @@
 		185DB2E21C7811AC00C8354C /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				18B7B2B91C78162F00FE1073 /* MAHomeTableViewController.h */,
+				18B7B2BA1C78162F00FE1073 /* MAHomeTableViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -114,6 +143,10 @@
 		185DB2E41C7811AC00C8354C /* view */ = {
 			isa = PBXGroup;
 			children = (
+				18B7B2C81C782F3F00FE1073 /* MATitleButton.h */,
+				18B7B2C91C782F3F00FE1073 /* MATitleButton.m */,
+				18B7B2D01C784C3600FE1073 /* MACoverView.h */,
+				18B7B2D11C784C3600FE1073 /* MACoverView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -121,10 +154,10 @@
 		185DB2E51C7811AC00C8354C /* main */ = {
 			isa = PBXGroup;
 			children = (
+				185DB2EB1C7811AC00C8354C /* main.m */,
 				185DB2E61C7811AC00C8354C /* AppDelegate.h */,
 				185DB2E71C7811AC00C8354C /* AppDelegate.m */,
 				185DB2E81C7811AC00C8354C /* controller */,
-				185DB2EB1C7811AC00C8354C /* main.m */,
 				185DB2EC1C7811AC00C8354C /* model */,
 				185DB2ED1C7811AC00C8354C /* view */,
 			);
@@ -167,6 +200,8 @@
 		185DB2EF1C7811AC00C8354C /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				18B7B2BC1C78164100FE1073 /* MAMessageTableViewController.h */,
+				18B7B2BD1C78164100FE1073 /* MAMessageTableViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -201,6 +236,10 @@
 			children = (
 				185DB2F41C7811AC00C8354C /* UIImage+MAimageRender.h */,
 				185DB2F51C7811AC00C8354C /* UIImage+MAimageRender.m */,
+				18B7B2C51C7823BA00FE1073 /* UIBarButtonItem+MABarItem.h */,
+				18B7B2C61C7823BA00FE1073 /* UIBarButtonItem+MABarItem.m */,
+				18B7B2CB1C78366400FE1073 /* UIView+Frame.h */,
+				18B7B2CC1C78366400FE1073 /* UIView+Frame.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -239,6 +278,8 @@
 		185DB2FA1C7811AC00C8354C /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				18B7B2C21C78166600FE1073 /* MAProfileTableViewController.h */,
+				18B7B2C31C78166600FE1073 /* MAProfileTableViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -280,6 +321,7 @@
 				185DB2DC1C7811AC00C8354C /* Classes */,
 				188B5AEE1C59A8790082EAD6 /* Assets.xcassets */,
 				188B5AF01C59A8790082EAD6 /* LaunchScreen.storyboard */,
+				18B7B2CF1C7837DA00FE1073 /* 公共.pch */,
 				188B5AF31C59A8790082EAD6 /* Info.plist */,
 				188B5AE21C59A8790082EAD6 /* Supporting Files */,
 			);
@@ -363,10 +405,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B7B2D21C784C3600FE1073 /* MACoverView.m in Sources */,
 				185DB2FD1C7811AC00C8354C /* AppDelegate.m in Sources */,
+				18B7B2BE1C78164100FE1073 /* MAMessageTableViewController.m in Sources */,
+				18B7B2C11C78165200FE1073 /* MADiscoverTableViewController.m in Sources */,
+				18B7B2BB1C78162F00FE1073 /* MAHomeTableViewController.m in Sources */,
 				185DB2FF1C7811AC00C8354C /* main.m in Sources */,
 				185DB2FE1C7811AC00C8354C /* MATabBarController.m in Sources */,
 				185DB3001C7811AC00C8354C /* UIImage+MAimageRender.m in Sources */,
+				18B7B2C71C7823BA00FE1073 /* UIBarButtonItem+MABarItem.m in Sources */,
+				18B7B2CA1C782F3F00FE1073 /* MATitleButton.m in Sources */,
+				18B7B2C41C78166600FE1073 /* MAProfileTableViewController.m in Sources */,
+				18B7B2CD1C78366400FE1073 /* UIView+Frame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +519,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "/Users/apple/Desktop/实战项目/MyFirstApp/MyFirstApp/公共.pch";
 				INFOPLIST_FILE = MyFirstApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -482,6 +534,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "/Users/apple/Desktop/实战项目/MyFirstApp/MyFirstApp/公共.pch";
 				INFOPLIST_FILE = MyFirstApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
