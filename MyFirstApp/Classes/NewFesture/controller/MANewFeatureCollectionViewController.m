@@ -101,7 +101,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [cell setImage:img];
     
    // cell.image = img;
-    
+    [cell layoutSubviews];
     return cell;
 }
 

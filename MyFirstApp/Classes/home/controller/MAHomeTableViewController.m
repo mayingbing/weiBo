@@ -64,11 +64,11 @@
     
 }
 
--(void)pop{
-    
-    
-    
-}
+//-(void)pop{
+//    
+//    
+//    
+//}
 
 -(void)push{
     
@@ -82,6 +82,11 @@
     
 }
 
+-(void)Actiondo:(id)sender {
+    
+
+}
+
 -(void)click{
     
     _titleBtn.selected = !_titleBtn.selected;
@@ -91,6 +96,7 @@
     cover.delegate = self;
     [cover setDimBackground:self.titleBtn.selected];
     
+    
     // 弹出pop菜单
     CGFloat popW = 200;
     CGFloat popX = (self.view.width - 200)*0.5 ;
@@ -99,12 +105,7 @@
     
     MAPopView *pop = [MAPopView showPop:CGRectMake(popX, popY, popW, popH)];
     _pop = pop;
-    
-    
     pop.contentView = self.one.view;
-    
-    
-
 }
 
 -(void)hidePopView:(MACoverView *)cover{

@@ -11,7 +11,6 @@
 @implementation MAPopView 
 
 
-
 +(instancetype)showPop:(CGRect )rect{
     MAPopView *pop = [[MAPopView alloc]initWithFrame:rect];
     
@@ -26,7 +25,7 @@
     
     for (UIView *popMenu in CZKeyWindow.subviews) {
         if ([popMenu isKindOfClass:self]) {
-             [popMenu removeFromSuperview];
+            [popMenu removeFromSuperview];
         }
     }
    
@@ -38,8 +37,7 @@
     
     _contentView = contentView;
     
-    contentView.backgroundColor = [UIColor clearColor];
-    
+    contentView.backgroundColor = [UIColor redColor];
     [self addSubview:contentView];
     
 }

@@ -22,15 +22,15 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     
-    MANewFeatureCollectionViewController *newFestureVC = [[MANewFeatureCollectionViewController alloc]init];
+  //  MANewFeatureCollectionViewController *newFestureVC = [[MANewFeatureCollectionViewController alloc]init];
     
-    newFestureVC.view.backgroundColor = [UIColor greenColor];
+   // newFestureVC.view.backgroundColor = [UIColor greenColor];
     
     
- //   MATabBarController *tabBarVc = [[MATabBarController alloc]init];
+    MATabBarController *tabBarVc = [[MATabBarController alloc]init];
     
    
-    self.window.rootViewController = newFestureVC;
+    self.window.rootViewController = tabBarVc;
     
     [self.window makeKeyAndVisible];
     
