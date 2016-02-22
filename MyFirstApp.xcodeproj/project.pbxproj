@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1857714F1C7ABEA500F4E6DB /* MATextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857714E1C7ABEA500F4E6DB /* MATextField.m */; };
+		185771531C7ADD0700F4E6DB /* MAScendeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185771511C7ADD0700F4E6DB /* MAScendeViewController.m */; };
+		185771541C7ADD0700F4E6DB /* MAScendeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185771521C7ADD0700F4E6DB /* MAScendeViewController.xib */; };
+		185771571C7AE24B00F4E6DB /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 185771561C7AE24B00F4E6DB /* UIBarButtonItem+Item.m */; };
+		1857715E1C7B00BC00F4E6DB /* MANewFeatureCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857715D1C7B00BC00F4E6DB /* MANewFeatureCollectionViewController.m */; };
 		185DB2DB1C7802EF00C8354C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185DB2DA1C7802EF00C8354C /* UIKit.framework */; };
 		185DB2FD1C7811AC00C8354C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DB2E71C7811AC00C8354C /* AppDelegate.m */; };
 		185DB2FE1C7811AC00C8354C /* MATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DB2EA1C7811AC00C8354C /* MATabBarController.m */; };
@@ -28,6 +33,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1857714D1C7ABEA500F4E6DB /* MATextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MATextField.h; path = MyFirstApp/Classes/main/controller/MATextField.h; sourceTree = SOURCE_ROOT; };
+		1857714E1C7ABEA500F4E6DB /* MATextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MATextField.m; path = MyFirstApp/Classes/main/controller/MATextField.m; sourceTree = SOURCE_ROOT; };
+		185771501C7ADD0700F4E6DB /* MAScendeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAScendeViewController.h; sourceTree = "<group>"; };
+		185771511C7ADD0700F4E6DB /* MAScendeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAScendeViewController.m; sourceTree = "<group>"; };
+		185771521C7ADD0700F4E6DB /* MAScendeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAScendeViewController.xib; sourceTree = "<group>"; };
+		185771551C7AE24B00F4E6DB /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
+		185771561C7AE24B00F4E6DB /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
+		1857715C1C7B00BC00F4E6DB /* MANewFeatureCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANewFeatureCollectionViewController.h; sourceTree = "<group>"; };
+		1857715D1C7B00BC00F4E6DB /* MANewFeatureCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANewFeatureCollectionViewController.m; sourceTree = "<group>"; };
 		185DB2DA1C7802EF00C8354C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		185DB2E61C7811AC00C8354C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		185DB2E71C7811AC00C8354C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,9 +91,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185771581C7B008B00F4E6DB /* NewFesture */ = {
+			isa = PBXGroup;
+			children = (
+				185771591C7B008B00F4E6DB /* controller */,
+				1857715A1C7B008B00F4E6DB /* model */,
+				1857715B1C7B008B00F4E6DB /* view */,
+			);
+			path = NewFesture;
+			sourceTree = "<group>";
+		};
+		185771591C7B008B00F4E6DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				1857715C1C7B00BC00F4E6DB /* MANewFeatureCollectionViewController.h */,
+				1857715D1C7B00BC00F4E6DB /* MANewFeatureCollectionViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		1857715A1C7B008B00F4E6DB /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		1857715B1C7B008B00F4E6DB /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		185DB2DC1C7811AC00C8354C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				185771581C7B008B00F4E6DB /* NewFesture */,
 				185DB2E51C7811AC00C8354C /* main */,
 				185DB2E11C7811AC00C8354C /* home */,
 				185DB2EE1C7811AC00C8354C /* message */,
@@ -119,6 +167,8 @@
 		185DB2E01C7811AC00C8354C /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1857714D1C7ABEA500F4E6DB /* MATextField.h */,
+				1857714E1C7ABEA500F4E6DB /* MATextField.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -138,6 +188,9 @@
 			children = (
 				18B7B2B91C78162F00FE1073 /* MAHomeTableViewController.h */,
 				18B7B2BA1C78162F00FE1073 /* MAHomeTableViewController.m */,
+				185771501C7ADD0700F4E6DB /* MAScendeViewController.h */,
+				185771511C7ADD0700F4E6DB /* MAScendeViewController.m */,
+				185771521C7ADD0700F4E6DB /* MAScendeViewController.xib */,
 				18B7B2D61C7853A000FE1073 /* MAPopTableViewController.h */,
 				18B7B2D71C7853A000FE1073 /* MAPopTableViewController.m */,
 			);
@@ -255,6 +308,8 @@
 				18B7B2C61C7823BA00FE1073 /* UIBarButtonItem+MABarItem.m */,
 				18B7B2CB1C78366400FE1073 /* UIView+Frame.h */,
 				18B7B2CC1C78366400FE1073 /* UIView+Frame.m */,
+				185771551C7AE24B00F4E6DB /* UIBarButtonItem+Item.h */,
+				185771561C7AE24B00F4E6DB /* UIBarButtonItem+Item.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -409,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188B5AF21C59A8790082EAD6 /* LaunchScreen.storyboard in Resources */,
+				185771541C7ADD0700F4E6DB /* MAScendeViewController.xib in Resources */,
 				188B5AEF1C59A8790082EAD6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +477,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B7B2D21C784C3600FE1073 /* MACoverView.m in Sources */,
+				1857715E1C7B00BC00F4E6DB /* MANewFeatureCollectionViewController.m in Sources */,
+				185771571C7AE24B00F4E6DB /* UIBarButtonItem+Item.m in Sources */,
 				18B7B2D81C7853A000FE1073 /* MAPopTableViewController.m in Sources */,
 				18B7B2DB1C7869C800FE1073 /* MANavigationController.m in Sources */,
 				185DB2FD1C7811AC00C8354C /* AppDelegate.m in Sources */,
@@ -434,7 +492,9 @@
 				18B7B2D51C784E3800FE1073 /* MAPopView.m in Sources */,
 				18B7B2CA1C782F3F00FE1073 /* MATitleButton.m in Sources */,
 				18B7B2C41C78166600FE1073 /* MAProfileTableViewController.m in Sources */,
+				185771531C7ADD0700F4E6DB /* MAScendeViewController.m in Sources */,
 				18B7B2CD1C78366400FE1073 /* UIView+Frame.m in Sources */,
+				1857714F1C7ABEA500F4E6DB /* MATextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

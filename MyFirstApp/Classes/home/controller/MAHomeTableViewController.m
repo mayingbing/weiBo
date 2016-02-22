@@ -12,6 +12,7 @@
 #import "MACoverView.h"
 #import "MAPopView.h"
 #import "MAPopTableViewController.h"
+#import "MAScendeViewController.h"
 
 
 @interface MAHomeTableViewController ()<MACoverViewDelegate>
@@ -71,6 +72,12 @@
 
 -(void)push{
     
+    self.hidesBottomBarWhenPushed = YES;
+    
+    MAScendeViewController *scende = [[MAScendeViewController alloc]init];
+    
+    
+    [self.navigationController pushViewController:scende animated:YES];
     
     
 }
