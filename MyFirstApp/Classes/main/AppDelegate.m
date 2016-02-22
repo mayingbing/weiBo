@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MATabBarController.h"
+#import "MANewFeatureCollectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,13 +21,16 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    MATabBarController *tabBarVc = [[MATabBarController alloc]init];
+    
+    MANewFeatureCollectionViewController *newFestureVC = [[MANewFeatureCollectionViewController alloc]init];
+    
+    newFestureVC.view.backgroundColor = [UIColor greenColor];
     
     
+ //   MATabBarController *tabBarVc = [[MATabBarController alloc]init];
     
-    
-    
-    self.window.rootViewController = tabBarVc;
+   
+    self.window.rootViewController = newFestureVC;
     
     [self.window makeKeyAndVisible];
     

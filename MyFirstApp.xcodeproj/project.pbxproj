@@ -12,6 +12,7 @@
 		185771541C7ADD0700F4E6DB /* MAScendeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185771521C7ADD0700F4E6DB /* MAScendeViewController.xib */; };
 		185771571C7AE24B00F4E6DB /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 185771561C7AE24B00F4E6DB /* UIBarButtonItem+Item.m */; };
 		1857715E1C7B00BC00F4E6DB /* MANewFeatureCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857715D1C7B00BC00F4E6DB /* MANewFeatureCollectionViewController.m */; };
+		185771611C7B098600F4E6DB /* MANewFeatureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185771601C7B098600F4E6DB /* MANewFeatureCollectionViewCell.m */; };
 		185DB2DB1C7802EF00C8354C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185DB2DA1C7802EF00C8354C /* UIKit.framework */; };
 		185DB2FD1C7811AC00C8354C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DB2E71C7811AC00C8354C /* AppDelegate.m */; };
 		185DB2FE1C7811AC00C8354C /* MATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DB2EA1C7811AC00C8354C /* MATabBarController.m */; };
@@ -42,6 +43,8 @@
 		185771561C7AE24B00F4E6DB /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
 		1857715C1C7B00BC00F4E6DB /* MANewFeatureCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANewFeatureCollectionViewController.h; sourceTree = "<group>"; };
 		1857715D1C7B00BC00F4E6DB /* MANewFeatureCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANewFeatureCollectionViewController.m; sourceTree = "<group>"; };
+		1857715F1C7B098600F4E6DB /* MANewFeatureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANewFeatureCollectionViewCell.h; sourceTree = "<group>"; };
+		185771601C7B098600F4E6DB /* MANewFeatureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANewFeatureCollectionViewCell.m; sourceTree = "<group>"; };
 		185DB2DA1C7802EF00C8354C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		185DB2E61C7811AC00C8354C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		185DB2E71C7811AC00C8354C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 		1857715B1C7B008B00F4E6DB /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1857715F1C7B098600F4E6DB /* MANewFeatureCollectionViewCell.h */,
+				185771601C7B098600F4E6DB /* MANewFeatureCollectionViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -484,6 +489,7 @@
 				185DB2FD1C7811AC00C8354C /* AppDelegate.m in Sources */,
 				18B7B2BE1C78164100FE1073 /* MAMessageTableViewController.m in Sources */,
 				18B7B2C11C78165200FE1073 /* MADiscoverTableViewController.m in Sources */,
+				185771611C7B098600F4E6DB /* MANewFeatureCollectionViewCell.m in Sources */,
 				18B7B2BB1C78162F00FE1073 /* MAHomeTableViewController.m in Sources */,
 				185DB2FF1C7811AC00C8354C /* main.m in Sources */,
 				185DB2FE1C7811AC00C8354C /* MATabBarController.m in Sources */,
