@@ -96,6 +96,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     UIImage *img = [UIImage imageNamed:imageName];
     
+    [cell currentPage:indexPath count:4];
+    
     [cell setImage:img];
     
    // cell.image = img;

@@ -12,6 +12,6 @@
 
 @property(nonatomic ,strong)UIImage *image;
 
-
+-(void)currentPage:(NSIndexPath *)indexPath count:(int)count;
 
 @end
