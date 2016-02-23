@@ -163,7 +163,7 @@
      MATabBarController*tabBarVc = [[MATabBarController alloc] init];
     
     // 切换根控制器:可以直接把之前的根控制器清空
-    CZKeyWindow.rootViewController = tabBarVc;
+    MYKeyWindow.rootViewController = tabBarVc;
     
 }
 

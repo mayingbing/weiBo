@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "MATabBarController.h"
 #import "MANewFeatureCollectionViewController.h"
+#import "MAOAuthViewController.h"
+#import "MAAccountTool.h"
+#import "MARootTool.h"
 
 @interface AppDelegate ()
 
@@ -21,31 +24,22 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
+    //选择进入界面
+  //  [self chooseVersion];
     
-    //获取当前版本号
-    
-    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
-    
-    //获取上一版本号
-    
-    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:@"Version"];
-    
-   // if([currentVersion isEqualToString:lastVersion]){
-       if(0){
-        MATabBarController *tabBarVc = [[MATabBarController alloc]init];
-        
-        self.window.rootViewController = tabBarVc;
+    if ([MAAccountTool account]) {
+        [MARootTool chooseVersion:self.window];
     }else{
+        //oauth界面
         
-        MANewFeatureCollectionViewController *newFestureVC = [[MANewFeatureCollectionViewController alloc]init];
+        MAOAuthViewController *oauthVc = [[MAOAuthViewController alloc]init];
         
-        self.window.rootViewController = newFestureVC;
-        
-        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:@"Version"];
-        
+        self.window.rootViewController = oauthVc;
+ 
     }
     
-
+    
+    
     
     
     
@@ -54,6 +48,9 @@
     
     return YES;
 }
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

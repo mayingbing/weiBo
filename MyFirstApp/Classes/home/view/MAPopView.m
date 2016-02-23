@@ -16,14 +16,14 @@
     
     pop.image = [UIImage imageWithStretchableName:@"popover_background"];
     
-    [CZKeyWindow addSubview:pop];
+    [MYKeyWindow addSubview:pop];
     
     return pop;
 }
 
 +(void)popHide{
     
-    for (UIView *popMenu in CZKeyWindow.subviews) {
+    for (UIView *popMenu in MYKeyWindow.subviews) {
         if ([popMenu isKindOfClass:self]) {
             [popMenu removeFromSuperview];
         }

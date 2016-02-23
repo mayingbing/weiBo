@@ -30,8 +30,8 @@
 
 +(instancetype)show{
     
-    MACoverView *cover = [[MACoverView alloc]initWithFrame:CZKeyWindow.frame];
-    [CZKeyWindow addSubview:cover];
+    MACoverView *cover = [[MACoverView alloc]initWithFrame:MYKeyWindow.frame];
+    [MYKeyWindow addSubview:cover];
     cover.backgroundColor = [UIColor yellowColor];
     
     return cover;

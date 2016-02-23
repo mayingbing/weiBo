@@ -16,7 +16,7 @@
 #import "UIImage+MAimageRender.h"
 
 
-#define CZKeyWindow [UIApplication sharedApplication].keyWindow
+#define MYKeyWindow [UIApplication sharedApplication].keyWindow
 
 // ...表示宏定义的可变参数
 // __VA_ARGS__:表示函数里面的可变参数
