@@ -7,6 +7,7 @@
 //
 
 #import "MANewFeatureCollectionViewCell.h"
+#import "MATabBarController.h"
 
 @interface MANewFeatureCollectionViewCell ()
 
@@ -97,6 +98,7 @@
         [btn setBackgroundImage:[UIImage imageNamed:@"new_feature_finish_button_highlighted"] forState:UIControlStateHighlighted];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(start) forControlEvents:UIControlEventTouchUpInside];
+    btn.enabled = YES;
 
         [btn sizeToFit];
         _startBtn = btn;
@@ -157,7 +159,11 @@
 
 -(void)start{
     
+    // 进入tabBarVc
+     MATabBarController*tabBarVc = [[MATabBarController alloc] init];
     
+    // 切换根控制器:可以直接把之前的根控制器清空
+    CZKeyWindow.rootViewController = tabBarVc;
     
 }
 

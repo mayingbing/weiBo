@@ -40,18 +40,21 @@
     //添加子控件
     
     MAHomeTableViewController *home = [[MAHomeTableViewController alloc]init];
-    home.view.backgroundColor = [UIColor redColor];
+    home.view.backgroundColor = [UIColor cyanColor];
     [self setAllChildViewControllerWith:home imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected" title:@"首页"];
     
     
     MAMessageTableViewController *message = [[MAMessageTableViewController alloc]init];
+    message.view.backgroundColor = [UIColor orangeColor];
     [self setAllChildViewControllerWith:message imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected" title:@"消息"];
     
     MADiscoverTableViewController *discover = [[MADiscoverTableViewController alloc]init];
-    discover.view.backgroundColor = [UIColor cyanColor];
+    discover.view.backgroundColor = [UIColor grayColor];
     [self setAllChildViewControllerWith:discover imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected" title:@"发现"];
     
-    MAProfileTableViewController *profile = [[MAProfileTableViewController alloc]init];    [self setAllChildViewControllerWith:profile imageName:@"tabbar_profile" selectedImageName:@"tabbar_profile_selected" title:@"我的"];
+    MAProfileTableViewController *profile = [[MAProfileTableViewController alloc]init];
+    profile.view.backgroundColor = [UIColor purpleColor];
+    [self setAllChildViewControllerWith:profile imageName:@"tabbar_profile" selectedImageName:@"tabbar_profile_selected" title:@"我的"];
 }
 
 -(void)setAllChildViewControllerWith:(UITableViewController *)vc imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName title:(NSString *)title{

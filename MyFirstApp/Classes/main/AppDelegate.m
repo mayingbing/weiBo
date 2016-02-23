@@ -22,15 +22,32 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     
-  //  MANewFeatureCollectionViewController *newFestureVC = [[MANewFeatureCollectionViewController alloc]init];
+    //获取当前版本号
     
-   // newFestureVC.view.backgroundColor = [UIColor greenColor];
+    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
+    
+    //获取上一版本号
+    
+    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:@"Version"];
+    
+   // if([currentVersion isEqualToString:lastVersion]){
+       if(0){
+        MATabBarController *tabBarVc = [[MATabBarController alloc]init];
+        
+        self.window.rootViewController = tabBarVc;
+    }else{
+        
+        MANewFeatureCollectionViewController *newFestureVC = [[MANewFeatureCollectionViewController alloc]init];
+        
+        self.window.rootViewController = newFestureVC;
+        
+        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:@"Version"];
+        
+    }
+    
+
     
     
-    MATabBarController *tabBarVc = [[MATabBarController alloc]init];
-    
-   
-    self.window.rootViewController = tabBarVc;
     
     [self.window makeKeyAndVisible];
     
