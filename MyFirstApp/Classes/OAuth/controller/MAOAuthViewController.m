@@ -13,6 +13,8 @@
 #import "MAAccountTool.h"
 #import "MARootTool.h"
 
+#import "MAWebATool.h"
+
 @interface MAOAuthViewController ()<UIWebViewDelegate>
 
 @end
@@ -77,38 +79,12 @@
 
 -(void)accessTokenWithCode:(NSString *)code{
     
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    
-    dic[@"client_id"]=@"1466602569";
-    dic[@"client_secret"]=@"6ae5c30025c1c6322de18947cd716180";
-    dic[@"grant_type"]=@"authorization_code";
-    dic[@"code"]=code;
-    dic[@"redirect_uri"]=@"http://www.baidu.com";
-    
-    
-    [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [MAWebATool accessTokenWithCode:code success:^(NSArray *dataArr) {
         
-       // NSLog(@"%@",responseObject);
-        /*
-         
-         "access_token" = "2.00Yiw6OGJ1iPbB50d2c804c70pGPek";
-         "expires_in" = 157679999;
-         "remind_in" = 157679999;
-         uid = 5709849610;
-         
-         */
         
-        MAAccount *account = [MAAccount accountWithDic:responseObject];
+    } failure:^(NSError *error) {
         
-        [MAAccountTool saveDataWithAccount:account];
-        
-        [MARootTool chooseVersion:MYKeyWindow];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-         NSLog(@"%@",error);
         
     }];
     

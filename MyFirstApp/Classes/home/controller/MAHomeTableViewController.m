@@ -14,11 +14,28 @@
 #import "MAPopTableViewController.h"
 #import "MAScendeViewController.h"
 
+#import "AFNetworking.h"
+#import "MAAccount.h"
+#import "MAAccountTool.h"
+
+#import "CZStatus.h"
+#import "CZPhoto.h"
+#import "MJExtension.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+
+
+#import "MAHTTPTool.h"
+#import "MAWebStatuses.h"
+#import "MAResultStatues.h"
+
 
 @interface MAHomeTableViewController ()<MACoverViewDelegate>
 
 @property(nonatomic ,strong)MAPopTableViewController *one;
 @property(nonatomic ,strong)MAPopView *pop;
+
+@property(nonatomic ,strong)NSMutableArray *statuses;
 
 @property(nonatomic ,weak)MATitleButton *titleBtn;
 
@@ -26,7 +43,12 @@
 
 @implementation MAHomeTableViewController
 
-
+-(NSMutableArray *)statuses{
+    if (_statuses == nil) {
+        _statuses = [NSMutableArray array];
+    }
+    return _statuses;
+}
 -(MAPopTableViewController *)one{
     if (_one == nil) {
         MAPopTableViewController *one = [[MAPopTableViewController alloc]init];
@@ -39,10 +61,66 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem setNavigationBarButtonItemWith:@"navigationbar_friendsearch" hightlightImageName:@"navigationbar_friendsearch_highlighted" target:self action:@selector(pop)];
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem setNavigationBarButtonItemWith:@"navigationbar_pop" hightlightImageName:@"navigationbar_pop_highlighted" target:self action:@selector(push)];
+    [self setNavigationItem];
     
- 
+    // 添加下拉刷新控件
+    
+    [self.tableView addHeaderWithTarget:self action:@selector(receiveWebData)];
+     // 添加上拉刷新控件
+    [self.tableView addFooterWithTarget:self action:@selector(loadMoreStatus)];
+    // 自动下拉刷新
+    
+    [self.tableView headerBeginRefreshing];
+}
+
+-(void)loadMoreStatus{
+    
+        NSString *maxIdStr = nil;
+        if (self.statuses.count) { // 有微博数据，才需要下拉刷新
+            long long maxId = [[[self.statuses lastObject] idstr] longLongValue] - 1;
+            maxIdStr = [NSString stringWithFormat:@"%lld",maxId];
+        }
+    
+    [MAWebStatuses moreStatusWithMaxId:maxIdStr success:^(NSArray *dataArr) {
+        [self.tableView headerEndRefreshing];
+        
+        [self.statuses addObjectsFromArray:dataArr];
+        // 刷新表格
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+-(void)receiveWebData{
+    NSString * SinceId = nil;
+    if (self.statuses.count) {
+        SinceId= [self.statuses[0] idstr];
+    }
+
+    [MAWebStatuses receiveWebStatusesWithSinceId:SinceId success:^(NSArray *statuse) {
+        // 结束下拉刷新
+        [self.tableView headerEndRefreshing];
+        
+        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuse.count)];
+        // 把最新的微博数插入到最前面
+        [self.statuses insertObjects:statuse atIndexes:indexSet];
+        
+        // 刷新表格
+        [self.tableView reloadData];
+        
+    } failure:^(NSError *error) {
+        
+        
+    }];
+  
+}
+-(void)setNavigationItem{
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem setNavigationBarButtonItemWith:@"navigationbar_friendsearch" hightlightImageName:@"navigationbar_friendsearch_highlighted" target:self action:@selector(leftClick)];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem setNavigationBarButtonItemWith:@"navigationbar_pop" hightlightImageName:@"navigationbar_pop_highlighted" target:self action:@selector(rightClick)];
+    
+    
     
     //titleBtn
     
@@ -62,15 +140,15 @@
     
     [titleBtn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     
+
+    
 }
 
-//-(void)pop{
-//    
-//    
-//    
-//}
+-(void)leftClick{
+    
+}
 
--(void)push{
+-(void)rightClick{
     
     self.hidesBottomBarWhenPushed = YES;
     
@@ -116,21 +194,35 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.statuses.count;
 }
 
-
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *ID = @"cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
+    
+    CZStatus *status = self.statuses[indexPath.row];
+    cell.textLabel.text = status.user.name;
+    
+    [cell.imageView sd_setImageWithURL:status.user.profile_image_url placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+    cell.detailTextLabel.text = status.text;
+    
+    return cell;
+}
 
 @end
